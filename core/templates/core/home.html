@@ -1,0 +1,21 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+Hiking Tours | Kyzyl Suu
+{% endblock %}
+
+{% block content %}
+<h1>Hiking Tours in Kyzyl Suu</h1>
+
+{% for tour in tours %}
+    <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+        <h2>{{ tour.title }}</h2>
+        <p>{{ tour.description }}</p>
+        <p><strong>Difficulty:</strong> {{ tour.difficulty }}</p>
+        <p><strong>Duration:</strong> {{ tour.duration_days }} days</p>
+        <p><strong>Price:</strong> ${{ tour.price_usd }}</p>
+    </div>
+{% empty %}
+    <p>No tours available yet.</p>
+{% endfor %}
+{% endblock %}

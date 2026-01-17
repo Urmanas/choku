@@ -1,15 +1,25 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/src/style.css" rel="stylesheet">
-
-  <title>Choku</title>
+    <meta charset="UTF-8">
+    <title>{% block title %}Kyzyl Suu Trails{% endblock %}</title>
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <header>
+        <h2>Kyzyl Suu Trails 🇰🇬</h2>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>© 2026 Kyzyl Suu Tourism</p>
+    </footer>
 </body>
 </html>
