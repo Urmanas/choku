@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="px-6 py-6 flex justify-between">
+    <a href="{% url 'orders:create_order' tour_id %}">
+        Book this tour
+    </a>
+</div>
+{% endblock %}

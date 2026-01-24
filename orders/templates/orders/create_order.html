@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Book tour: {{ tour.title }}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Phone:</label><br>
+    <input type="text" name="phone" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email"><br><br>
+
+    <label>People:</label><br>
+    <input type="number" name="people" value="1" min="1"><br><br>
+
+    <button type="submit">Book now</button>
+</form>
+{% endblock %}
